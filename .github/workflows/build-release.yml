@@ -17,9 +17,9 @@ jobs:
         
       - name: Assemble the sources
         run: |
-          as65/as65 -l -t 6502_functional_test.a65
-          as65/as65 -l -t 6502_decimal_test.a65
-          as65/as65 -l -t 6502_interrupt_test.a65
+          as65/as65 -l -mwt 6502_functional_test.a65
+          as65/as65 -l -mwt 6502_decimal_test.a65
+          as65/as65 -l -mwt 6502_interrupt_test.a65
           
       - name: Publish the release 
         uses: "marvinpinto/action-automatic-releases@latest"
